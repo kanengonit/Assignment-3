@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Vision Mood Board</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dynamic Vision Mood Board</h1>
+    </header>
+    <main>
+        <section class="image-tool">
+            <h2>Add Picture</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <div id="imagePreview"></div>
+        
+            <!-- Use Unsplash To Search Images For Vision Board -->
+            <h2>Search for Images</h2>
+            <input type="text" id="imageSearch" placeholder="Search for images (e.g., travel)">
+            <button id="searchImageButton">Search Images</button>
+            <div id="imageSearchResults"></div> <!-- Display search results for the user to choose from -->
+        </section>  
+
+        <section id="tools">
+            <div class="color-palette">
+                <h2>Pick a Color</h2>
+                <div class="color" style="background-color: #FF6F61;"></div>
+                <div class="color" style="background-color: #6B5B95;"></div>
+                <div class="color" style="background-color: #000000;"></div>
+                <div class="color" style="background-color: #FF5733;"></div>
+                <div class="color" style="background-color: #33FF57;"></div>
+                <div class="color" style="background-color: #3357FF;"></div>
+                <div class="color" style="background-color: #FF33A1;"></div>
+                <div class="color" style="background-color: #FFD133;"></div>
+            </div>
+        
+            <div class="text-tool">
+                <h2>Add Text</h2>
+                <input type="text" id="textInput" placeholder="Enter your text">
+                <button id="addTextButton">Add Text</button>
+            </div>
+        
+            <!-- Select emoji for mood board to show emotions or vision board to add colour/exressions to visions-->
+            <section id="emoji-picker">
+                <h2>Pick an Emoji</h2>
+                <div class="emoji-picker">
+                    <span class="emoji" data-emoji="😀">😀</span>
+                    <span class="emoji" data-emoji="😎">😎</span>
+                    <span class="emoji" data-emoji="❤️">❤️</span>
+                    <span class="emoji" data-emoji="🌟">🌟</span>
+                    <span class="emoji" data-emoji="🔥">🔥</span>
+                    <span class="emoji" data-emoji="🛫">🛫</span>
+                    <span class="emoji" data-emoji="😊">😊</span>
+                    <span class="emoji" data-emoji="🍀">🍀</span>
+                    <span class="emoji" data-emoji="🎉">🎉</span>
+                    <span class="emoji" data-emoji="☹️">☹️</span>
+                    <span class="emoji" data-emoji="🌈">🌈</span>
+                    <span class="emoji" data-emoji="💥">💥</span>
+                </div>
+            </section>
+        </section>
+        
+        <section id="moodBoard">
+            <h2>Your Vision/Mood Board</h2>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
